@@ -21,6 +21,27 @@ app.get("/guitar", (req, res) => {
   ]);
 });
 
-app.listen(3000, () => {
+app.get("/waxing", (req, res) => {
+  res.json([
+    {
+      message: "Manan waxing day 1-1",
+      img: "https://cdn.discordapp.com/attachments/893327321782706256/925640894969958420/IMG_7633.jpg",
+    },
+    {
+      message: "Manan waxing day 1-2",
+      img: "https://cdn.discordapp.com/attachments/893327321782706256/925640895297118299/IMG_7634.jpg",
+    },
+    {
+      message: "Manan waxing day 2-1",
+      img: "https://cdn.discordapp.com/attachments/893327321782706256/925640894244323368/IMG_7631.jpg",
+    },
+    {
+      message: "Manan waxing day 2-2",
+      img: "https://cdn.discordapp.com/attachments/893327321782706256/925640894626033674/IMG_7632.jpg",
+    },
+  ]);
+});
+
+app.listen(process.env.PORT, () => {
   console.log("Server started on port 3000");
 });
