@@ -42,6 +42,20 @@ app.get("/waxing", (req, res) => {
   ]);
 });
 
+app.get("/memes", (req, res) => {
+  res.json([
+    {
+      message: "Manan and tanki",
+      img: "https://cdn.discordapp.com/attachments/913460367844323378/927289026896101446/unknown.png",
+    },
+    {
+      message: "padhai kar vele",
+      img: "https://cdn.discordapp.com/attachments/913460367844323378/927289176452366366/unknown.png",
+    },
+  ]);
+});
+
+
 app.listen(process.env.PORT, () => {
   console.log("Server started on port 3000");
 });
